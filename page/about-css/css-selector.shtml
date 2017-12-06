@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赵海</title>
+    <link href="/favicon.ico" rel="SHORTCUT ICON" />
+    <link rel="stylesheet" href="/assets/css/about-css/selector.css" />
+</head>
+<body>
+    <div class="body-container">
+        <!--#include virtual="/inc/header.shtml"-->
+        <!--主体Start-->
+        <div class="main-container">
+            <ul class="article-list">
+                <li>
+                    <b>CSS3 选择器——属性选择器</b>
+                    <a href="http://www.w3cplus.com/css3/attribute-selectors" target="_blank">详细</a>
+                    <ol>
+                        <li><span class="important">E[attr]</span>：只使用属性名，但没有确定任何属性值；</li>
+                        <li><span class="important">E[attr="value"]</span>：指定属性名，并指定了该属性的属性值；</li>
+                        <li><span class="important">E[attr~="value"]</span>：指定属性名，并且有属性值，此属性值是一个词列表，并且以空格隔开，其中词列表中包含了一个value词，而且等号前面的“〜”不能不写；</li>
+                        <li><span class="important">E[attr^="value"]</span>：指定了属性名，并且有属性值，属性值是以value开头的；</li>
+                        <li><span class="important">E[attr$="value"]</span>：指定了属性名，并且有属性值，而且属性值是以value结束的；</li>
+                        <li><span class="important">E[attr*="value"]</span>：指定了属性名，并且有属性值，而且属值中包含了value；</li>
+                        <li><span class="important">E[attr|="value"]</span>：指定了属性名，并且属性值是value或者以“value-”开头的值（比如说zh-cn）；</li>
+                    </ol>
+                </li>
+                <li>
+                    <b>CSS3 选择器——伪类选择器</b>
+                    <a href="https://www.w3cplus.com/css3/pseudo-class-selector" target="_blank">详细</a>
+                    <ol>
+                        <li><span class="important">:hover</span>用于当用户把鼠标移动到元素上面时的效果；</li>
+                        <li><span class="important">:active</span>用于用户点击元素那一下的效果（正发生在点的那一下，松开鼠标左键此动作也就完成了）；</li>
+                        <li><span class="important">:focus</span>用于元素成为焦点，这个经常用在表单元素上；</li>
+                        <li><span class="important">:checked，:enabled，:disabled</span>主要是针对于"type="text"有enable和disabled两种状态,"type="radio"和"type="checkbox""有"checked"和"unchecked"两种状态；</li>
+                        <li><span class="important">:first-child</span>选择某个元素的第一个子元素；</li>
+                        <li><span class="important">:last-child</span>选择某个元素的最后一个子元素；</li>
+                        <li><span class="important">:nth-child()</span>选择某个元素的一个或多个特定的子元素；</li>
+                        <li><span class="important">:nth-last-child()</span>选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算；</li>
+                        <li><span class="important">:only-child</span>选择的元素是它的父元素的唯一一个了元素；</li>
+                        <li><span class="important">:only-of-type</span>选择一个元素是它的上级元素的唯一一个相同类型的子元素；</li>
+                        <li><span class="important">:empty</span>选择的元素里面没有任何内容；</li>
+                        <li><span class="important">:not()</span>定位不匹配该选择器的元素；</li>
+                        <li><span class="important">::first-line</span>选择元素的第一行；</li>
+                        <li><span class="important">::first-letter</span>选择文本块的第一个字母；</li>
+                        <li><span class="important">::before，::after</span>给元素的前面或后面插入内容，这两个常用"content"配合使用，见过最多的就是清除浮动；</li>
+                        <li><span class="important">::selection</span>用来改变浏览网页选中文的默认效果；只能设置两个属性，一个就是background,另一个就是color属性；</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <!--主体End-->
+    </div>
+</body>
+</html>

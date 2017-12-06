@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赵海</title>
+    <link rel="stylesheet" href="/assets/css/about-css/minus-margin.css" />
+</head>
+<body>
+    <div class="body-container">
+        <!--#include virtual="/inc/header.shtml"-->
+        <!--主体Start-->
+        <div class="main-container">
+            <h1>负margin的作用</h1>
+            <div class="container2"><!--固定宽-->
+                <ul><!--每行排四个子元素-->
+                    <li>子元素1</li>
+                    <li>子元素2</li>
+                    <li>子元素3</li>
+                    <li>子元素4</li>
+                    <li>子元素5</li>
+                    <li>子元素6</li>
+                    <li>子元素7</li>
+                    <li>子元素8</li>
+                </ul>
+            </div>
+        </div>
+        <!--主体End-->
+    </div>
+</body>
+</html>

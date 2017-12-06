@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赵海</title>
+    <link rel="stylesheet" href="/assets/css/about-css/css3-text-fill-color.css" />
+</head>
+<body>
+    <div class="body-container">
+        <!--#include virtual="/inc/header.shtml"-->
+        <!--主体Start-->
+        <div class="main-container">
+            <h1>css3属性text-fill-color--文字效果</h1>
+            <div class="masked">
+                <h4>这是一行文字遮罩动画</h4>
+                <h5>这是一行镂空文字</h5>
+                <h3>这是一行渐变色文字</h3>
+            </div>
+        </div>
+        <!--主体End-->
+    </div>
+</body>
+</html>

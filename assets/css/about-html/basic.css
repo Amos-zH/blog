@@ -1,0 +1,19 @@
+@import "../base.css";
+.body-list1{
+    margin-left: 40px;
+}
+.body-list1 li{
+    list-style: decimal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    line-height: 2;
+}
+.important{
+    color: #FF3C1D;
+}
+.details{
+    font-size: 12px;
+    display: block;
+    margin-left: 10px;
+}

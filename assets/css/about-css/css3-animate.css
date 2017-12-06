@@ -1,0 +1,381 @@
+@import "../base.css";
+h3{ margin-left: 20px;font-size: 1.2em; }
+h5{ margin: 10px 0 10px 30px; }
+.hover-box, .color-box, .anima-box{ border: 2px solid #333; }
+.main-container span{
+    display: inline-block;
+    height: 40px;
+    min-width: 80px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: #ccc;
+    color: #333;
+    margin: 10px;
+}
+.hover-box span{
+    transition: all .4s;
+    -moz-transition: all .4s; /* Firefox 4 */
+    -webkit-transition: all .4s; /* Safari 和 Chrome */
+    -o-transition: all .4s; /* Opera */
+}
+.btn-big:hover{
+    transform: scale(1.2);
+}
+.btn-small:hover{
+    transform: scale(0.8);
+}
+.btn-skew-lt, .btn-skew-rt{
+    transform-origin: 0 100%;
+}
+.btn-skew-lb, .btn-skew-rb{
+    transform-origin: 100% 0;
+}
+.btn-skew-l:hover{
+    transform: skew(15deg);
+}
+.btn-skew-r:hover{
+    transform: skew(-15deg);
+}
+.btn-skew-lt:hover{
+    transform: skew(15deg);
+}
+.btn-skew-rt:hover{
+    transform: skew(-15deg);
+}
+.btn-skew-lb:hover{
+    transform: skew(-15deg);
+}
+.btn-skew-rb:hover{
+    transform: skew(15deg);
+}
+.btn-rotate-big-l:hover{
+    transform: scale(1.2) rotate(-10deg);
+}
+.btn-rotate-big-r:hover{
+    transform: scale(1.2) rotate(10deg);
+}
+.btn-rotate45:hover{
+    transform: rotate(45deg);
+}
+.btn-rotate90:hover{
+    transform: rotate(90deg);
+}
+.btn-rotate135:hover{
+    transform: rotate(135deg);
+}
+.btn-rotate180:hover{
+    transform: rotate(180deg);
+}
+.btn-rotate360:hover{
+    transform: rotate(360deg);
+}
+.btn-rotate90-anim:hover{
+    animation: rotate 1s infinite;
+    -webkit-animation: rotate 1s infinite;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(90deg) scale(1.2); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+.move-up:hover{
+    transform: translate(0, -10px);
+}
+.move-down:hover{
+    transform: translate(0, 10px);
+}
+.move-left:hover{
+    transform: translate(-10px, 0);
+}
+.move-right:hover{
+    transform: translate(10px, 0);
+}
+.border-out:hover{
+    box-shadow: 0 0 0 5px #4d4d4d;
+}
+.border-in:hover{
+    box-shadow: 0 0 0 5px #4d4d4d inset;
+}
+.border-write:hover{
+    box-shadow: inset 0 0 0 20px #fff;
+}
+.border-radius:hover{
+    border-radius: 20px;
+}
+.border-shadow:hover{
+    box-shadow: 0 20px 10px -10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+/*颜色变化*/
+/*当前元素设置相对定位*/
+.color-box span{
+    position: relative;
+    transition: all .3s;
+    z-index: 1;
+}
+/*颜色块设置绝对定位*/
+.color-block-top:before, .color-block-bottom:before, .color-block-left:before, .color-block-right:before, .color-block-center1:before, .color-block-vertical1:before, .color-block-center2:before, .color-block-center2:after, .color-block-vertical2:before, .color-block-vertical2:after{
+    position: absolute;
+    transition: all .3s;
+    content: '';
+    display: block;
+    background: #09f;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+/*颜色从上往下变化*/
+.color-block-top:before{
+    bottom: 0;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+}
+/*颜色从下往上变化*/
+.color-block-bottom:before{
+    bottom: 0;
+    left: 0;
+    transform-origin: 50% 100%;
+    transform: scaleY(0);
+}
+/*颜色从左往右变化*/
+.color-block-left:before{
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+}
+/*颜色从右往左变化*/
+.color-block-right:before{
+    bottom: 0;
+    left: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+/*水平中间向两边*/
+.color-block-center1:before{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: scaleX(0);
+}
+/*垂直中间向两边*/
+.color-block-vertical1:before{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: scaleY(0);
+}
+/*水平两边向中间*/
+.color-block-center2:before{
+    top: 0;
+    left: 0;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+}
+.color-block-center2:after{
+    top: 0;
+    right: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+/*垂直两边向中间*/
+.color-block-vertical2:before{
+    top: 0;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+}
+.color-block-vertical2:after{
+    bottom: 0;
+    right: 0;
+    transform-origin: 50% 100%;
+    transform: scaleY(0);
+}
+/*垂直方向进来的:before变化*/
+.color-block-top:hover:before, .color-block-bottom:hover:before, .color-block-vertical1:hover:before{
+    transform: scaleY(1);
+}
+/*水平方向进来的:before变化*/
+.color-block-left:hover:before, .color-block-right:hover:before, .color-block-center1:hover:before{
+    transform: scaleX(1);
+}
+/*水平方向:before变化 50%*/
+.color-block-center2:hover:before, .color-block-center2:hover:after{
+    transform: scaleX(.51);
+}
+/*垂直方向:before变化 50%*/
+.color-block-vertical2:hover:before, .color-block-vertical2:hover:after{
+    transform: scaleY(.51);
+}
+/*当前元素文字颜色变化*/
+.color-box span:hover{
+    color: #fff;
+}
+/*上下划线设置绝对定位*/
+.line-top-left:before, .line-top-right:before, .line-bottom-left:before, .line-bottom-right:before, .line-top-out:before, .line-top-in:before, .line-top-in:after, .line-bottom-out:before, .line-bottom-in:after, .line-bottom-in:before{
+    position: absolute;
+    transition: all .3s;
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #09f;
+    z-index: -1;
+    transform: scaleX(0);
+}
+/*上划线从左往右*/
+.line-top-left:before{
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+}
+/*上划线从右往左*/
+.line-top-right:before{
+    top: 0;
+    right: 0;
+    transform-origin: 100% 0;
+}
+/*上划线从内向两边*/
+.line-top-out:before{
+    top: 0;
+    margin: auto;
+}
+/*上划线从两边向内*/
+.line-top-in:before{
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+}
+.line-top-in:after{
+    top: 0;
+    right: 0;
+    transform-origin: 100% 0;
+}
+/*下划线从左往右*/
+.line-bottom-left:before{
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 100%;
+}
+/*下划线从右往左*/
+.line-bottom-right:before{
+    bottom: 0;
+    right: 0;
+    transform-origin: 100% 100%;
+}
+/*下划线从内向两边*/
+.line-bottom-out:before{
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+/*下划线从两边向内*/
+.line-bottom-in:before{
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 100%;
+}
+.line-bottom-in:after{
+    bottom: 0;
+    left: 0;
+    transform-origin: 100% 100%;
+}
+/*水平方向:before的变化*/
+.line-top-left:hover:before, .line-top-right:hover:before, .line-bottom-left:hover:before, .line-bottom-right:hover:before, .line-top-out:hover:before, .line-bottom-out:hover:before{
+    transform: scaleX(1);
+}
+.line-top-in:hover:before, .line-top-in:hover:after, .line-bottom-in:hover:before, .line-bottom-in:hover:after{
+    transform: scaleX(.51);
+}
+/*初始化箭头样式*/
+.arrow-t:before, .arrow-b:before, .arrow-l:before, .arrow-r:before, .arrow-body-t:before, .arrow-body-b:before, .arrow-body-l:before, .arrow-body-r:before{
+    position: absolute;
+    transition: all .3s;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-style: solid;
+    z-index: -1;
+}
+.arrow-t:before, .arrow-body-b:before{
+    top: 0;
+    left: 0;
+    right: 0;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ccc transparent;
+}
+.arrow-b:before, .arrow-body-t:before{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-width: 10px 10px 0 10px;
+    border-color: #ccc transparent transparent transparent;
+}
+.arrow-l:before, .arrow-body-r:before{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ccc transparent transparent;
+}
+.arrow-r:before, .arrow-body-l:before{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ccc;
+}
+/*hover后的效果*/
+.arrow-t:hover:before, .arrow-body-t:hover, .arrow-body-b:hover:before{
+    transform: translateY(-10px);
+}
+.arrow-b:hover:before, .arrow-body-b:hover, .arrow-body-t:hover:before{
+    transform: translateY(10px);
+}
+.arrow-l:hover:before, .arrow-body-l:hover, .arrow-body-r:hover:before{
+    transform: translateX(-10px);
+}
+.arrow-r:hover:before, .arrow-body-r:hover, .arrow-body-l:hover:before{
+    transform: translateX(10px);
+}
+/*闪烁动画*/
+.flash:hover{
+    animation: flash .4s ease;
+}
+@keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+.alarm:hover{
+    animation: alarm 1s ease;
+}
+@keyframes alarm {
+    0% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}

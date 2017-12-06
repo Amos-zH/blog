@@ -1,0 +1,32 @@
+@import url(../base.css);
+h1{
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+}
+.masked{
+    text-align: center;
+    font-size: 50px;
+}
+.masked h4{
+    background: url(/assets/img/paint.png);
+    -webkit-text-fill-color: transparent;/*文字填充颜色*/
+    -webkit-background-clip:text;/*规定背景绘制区域*/
+    -webkit-animation-name:masked-animation;/*动画的名称*/
+    -webkit-animation-duration:20s;/*动画完成一个周期需要的时间*/
+    -webkit-animation-iteration-count:infinite;/*动画播放次数--无限次*/
+    -webkit-animation-timing-function:linear;/*规定动画的速度曲线*/
+    color: #fff;
+}
+@-webkit-keyframes masked-animation{
+    0%{ background-position: left bottom; }
+    100%{ background-position: right bottom; }
+}
+.masked h5{
+    -webkit-text-fill-color: transparent;/*文字填充颜色*/
+    -webkit-text-stroke:1px #000;/*文字描边*/
+}
+.masked h3{
+    background: linear-gradient(to bottom,#fcf,#000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

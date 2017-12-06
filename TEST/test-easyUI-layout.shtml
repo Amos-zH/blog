@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赵海</title>
+    <link rel="stylesheet" href="/assets/css/test/layout.css" />
+    <link rel="stylesheet" href="/assets/css/easyui.css" />
+    <script src="/assets/js/libs/jquery-1.8.3.min.js"></script>
+    <script src="/assets/js/libs/jquery.easyui.min.js"></script>
+</head>
+<body style="height: 100%">
+    <div class="body-container">
+        <!--头部Start-->
+        <div class="header">
+            <div class="header-box">
+                <h3>ZH-WEB</h3>
+                <a class="btn-back" href="../index.html">
+                    <i class="arrow-left"></i>
+                    <i class="arrow-body"></i>
+                </a>
+            </div>
+        </div>
+        <!--头部End-->
+        <div class="main-container">
+            <div class="easyui-layout pannel">
+                <div class="" data-options="region:'north', split:true, title:'north', collapsible:false" style="height: 100px;">north</div>
+                <div class="" data-options="region:'south', split:true, title:'south', collapsible:false" style="height: 100px;">south</div>
+                <div class="" data-options="region:'east', split:true, title:'east', collapsible:true" style="width: 100px;">east</div>
+                <div class="" data-options="region:'west', split:true, title:'west', collapsible:false" style="width: 100px;">west</div>
+                <div class="" data-options="region:'center', split:true, title:'center'" style="height: 100px;">center</div>
+            </div>
+            <div class="btn-box">
+                <a class="btn jsBtnRemove">移除</a>
+                <a class="btn jsBtnAdd">增加</a>
+                <a class="btn jsBtnCollapse">折叠</a>
+                <a class="btn jsBtnExpand">展开</a>
+                <a class="btn jsBtnResize">设置布局大小</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            //移除
+            $('.jsBtnRemove').click(function () {
+                $('.pannel').layout('remove',region= 'north');
+            });
+            //添加
+            $('.jsBtnAdd').click(function () {
+                $('.pannel').layout('add',{
+                    region: 'north',
+                    width: 100,
+                    height: 100,
+                    title: 'west',
+                    split: true,
+                    content:'west',
+                    tools: [{
+                        iconCls:'icon-add',
+                        handler:function(){alert('add')}
+                    },{
+                        iconCls:'icon-remove',
+                        handler:function(){alert('remove')}
+                    }]
+                })
+            });
+            //折叠
+            $('.jsBtnCollapse').click(function () {
+                $('.pannel').layout('collapse',region = 'east')
+            });
+            //展开
+            $('.jsBtnExpand').click(function () {
+                $('.pannel').layout('expand',region = 'east')
+            });
+            //设置布局大小
+            $('.jsBtnResize').click(function () {
+               /* $('.pannel').panel({
+                    width: 800,
+                    height: 500,
+                    top: 20
+                });*/
+                $('.pannel').layout('panel',region = 'south').panel('resize',{ height:200 });
+                $('.pannel').layout('resize');
+            })
+        })
+    </script>
+</body>
+</html>

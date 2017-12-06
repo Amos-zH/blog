@@ -1,0 +1,45 @@
+@background-color: #fff;
+@text-color: #333;
+div{
+  background: @background-color;
+}
+/*Mixins*/
+.test1{
+  background: red;
+  display: block;
+}
+.mixins1{
+  .test1
+}
+
+.test2(){
+  font-size: 16px;
+}
+.mixins2{
+  .test2;
+  color: blue;
+  &:hover{
+    color: #0E65AF;
+  }
+}
+
+.test3(@size: 16px;){
+  width: @size;
+  height: @size;
+  border: @size solid @text-color;
+}
+.mixins3{
+  .test3(20px)
+}
+/*嵌套*/
+ul{
+  color: #e5e5e5;
+  font-size: 18px;
+  li{
+    color: #00B83F;
+    display: block;
+    > ul{
+      color: #0E65AF;
+    }
+  }
+}

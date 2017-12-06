@@ -1,0 +1,170 @@
+@import url('../commons.css');
+@import url('../base.css');
+.maketable2{
+    font-size: 0;
+    border: 1px solid #2171b5;
+    border-collapse: separate;
+}
+.maketable2 th{
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    background: #F5F5F5;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    text-align: center;
+}
+.maketable2 td{
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    position: relative;
+    vertical-align: top;
+}
+.maketable2 .input-weight{
+    width: 80%;
+    height: 30px;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+}
+.format-chooseman{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #e7e7e7;
+    color: #0e65af;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.format-chooseman:hover{
+    border-color: #0e65af;
+}
+.format-chooseman span{
+    float: left;
+    font-size: 14px;
+}
+.format-chooseman i{
+    float: right;
+    font-size: 20px;
+}
+.format-percent{
+    display: inline-block;
+    width: 70px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #e7e7e7;
+    vertical-align: top;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.selectedlist{
+    display: block;
+    margin-top: 15px;
+}
+.selectedlist li{
+    margin-top: 7px;
+    font-size: 14px;
+}
+.selectedman{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #e7e7e7;
+    font-weight: bold;
+    padding: 0 10px;
+    text-align: left;
+}
+.slctpercent{
+    display: inline-block;
+    width: 70px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #e7e7e7;
+    vertical-align: top;
+    margin-left: 10px;
+    text-align: center;
+}
+.delete-selected{
+    position: absolute;
+    top: 0px;
+    right: 6px;
+    float: right;
+    background: url("/assets/img/small-icon.png") no-repeat -61px 0px;
+    width: 12px;
+    height: 12px;
+    line-height: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.select-person{
+    padding: 20px 0 30px 0;
+}
+.maketable2 .add-line{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: #0e65af;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+}
+.add-line img{
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.maketable2 .delete-line{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 19px;
+    color: #fff;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: #0e65af;
+    cursor: pointer;
+}
+/*div变textarea*/
+.div-textarea{
+    width: auto;
+    min-height: 70px;
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    outline: 0;
+    /*border: 1px solid #a0b3d6;*/
+    font-size: 14px;
+    line-height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: left;
+}
+.div-textarea-focus{
+    box-shadow: 0 0 3px 2px #78aeda inset;
+}
+/*div为空时显示 element attribute content*/
+.div-textarea:empty:before{
+    content: attr(placeholder);   /* element attribute*/
+    /*content: 'this is content';*/
+    color: #999999;
+}
+/*div焦点时内容为空*/
+.div-textarea:focus:before{
+    content:none;
+}

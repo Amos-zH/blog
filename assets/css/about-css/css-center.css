@@ -1,0 +1,32 @@
+@import "../base.css";
+.list-contant{
+    padding: 0 40px;
+    font-size: 14px;
+}
+.list-li1{
+    list-style: disc;
+    line-height: 26px;
+    margin-top: 10px;
+}
+.list-li2{
+    line-height: 26px;
+    margin-left: 20px;
+}
+.list-li2:before{
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.list-contant pre{
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+    background: rgba(126, 136, 109, 0.24);
+}
+.list-contant .suit{
+    color: red;
+}

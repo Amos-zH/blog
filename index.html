@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赵海</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link href="/favicon.ico" rel="SHORTCUT ICON" />
+</head>
+<body>
+    <div class="body-container">
+        <!--头部Start-->
+        <div class="header">
+            <div class="header-box">
+                <h3>ZH-WEB</h3>
+                <div class="time-box">
+                    <b>入行天数:</b>
+                    <i class="days jsSetDays"></i><sub>天</sub>
+                    <span>入行时间:2016年12月26日</span>
+                </div>
+            </div>
+        </div>
+        <!--头部End-->
+        <!--主体Start-->
+        <div class="main clear">
+            <div class="main-left">
+                <h1>常用查询</h1>
+                <ul class="article-list">
+                    <li>
+                        <b>清除浮动</b>
+                        <ol>
+                            <li>父元素设置<span class="important">overflow:hidden</span> 适用页面中没有对溢出的操作（如下拉菜单）</li>
+                            <li>父元素设置<span class="important">.clear:after{ content:'';display:block;height:0;visibility:hidden;clear:both; }</span> 通用</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <b>三角形绘制</b>
+                        <p>
+                            <i class="sanjiao" style="display: inline-block;width: 0;height: 0;border: 10px solid transparent;border-top-color: #ffa8a8;"></i>
+                            <i class="sanjiao" style="display: inline-block;width: 0;height: 0;border: 10px solid transparent;border-bottom-color: #ffa8a8;"></i>
+                            <i class="sanjiao" style="display: inline-block;width: 0;height: 0;border: 10px solid transparent;border-right-color: #ffa8a8;"></i>
+                            <i class="sanjiao" style="display: inline-block;width: 0;height: 0;border: 10px solid transparent;border-left-color: #ffa8a8;"></i>
+                        </p>
+                    </li>
+                    <li>
+                        <b>DIV模拟textarea文本域实现高度自适应</b>
+                        <a href="http://www.zhangxinxu.com/wordpress/2010/12/div-textarea-height-auto/" target="_blank">详细</a>
+                        <div contenteditable="true" class="div-textarea" placeholder="请输入文字"></div>
+                    </li>
+                    <li>
+                        <b></b>
+                        <a href="http://www.zhangxinxu.com/wordpress/2010/12/div-textarea-height-auto/" target="_blank">详细</a>
+                        <div class="container2"><!--固定宽-->
+                            <ul><!--每行排四个子元素-->
+                                <li>子元素1</li>
+                                <li>子元素2</li>
+                                <li>子元素3</li>
+                                <li>子元素4</li>
+                                <li>子元素5</li>
+                                <li>子元素6</li>
+                                <li>子元素7</li>
+                                <li>子元素8</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-right">
+                <h3>Content</h3>
+                <ul class="mianNav">
+                    <li class="li-nav1"><a href="javascript:;">html</a>
+                        <ul class="subNav1">
+                            <li><a href="page/about-html/basic.shtml">需要关注的点</a></li>
+                            <li><a href="page/about-html/table.shtml">h5-div模仿textarea</a></li>
+                            <li><a href="page/about-html/buju.shtml">布局</a></li>
+                        </ul>
+                    </li>
+                    <li class="li-nav2"><a href="javascript:;">css</a>
+                        <ul class="subNav2">
+                            <li><a href="page/about-css/css-basic.shtml">易忘记的重要css</a></li>
+                            <li><a href="page/about-css/css-selector.shtml">css选择器</a></li>
+                            <li><a href="page/about-css/css-center.shtml">水平垂直居中实现</a></li>
+                            <li><a href="page/about-css/css3-text-fill-color.shtml">css3属性text-fill-color文字效果</a></li>
+                            <li><a href="page/about-css/fu-margin.shtml">负margin的作用</a></li>
+                            <li><a href="page/about-css/css3-animate.shtml">css3常用动画</a></li>
+                        </ul>
+                    </li>
+                    <li class="li-nav3"><a href="javascript:;">js</a>
+                        <ul class="subNav3">
+                            <li><a href="javascript:;">列表1</a></li>
+                        </ul>
+                    </li>
+                    <li class="li-nav4"><a href="javascript:;">test练习</a>
+                        <ul class="subNav4">
+                            <li><a href="TEST/test-easyUI-layout.shtml">easyUI-layout</a></li>
+                            <li><a href="TEST/resize-event.shtml">resize-event插件</a></li>
+                        </ul>
+                    </li>
+                    <li class="li-nav4"><a href="javascript:;">vue.js</a>
+                        <ul class="subNav4">
+                            <li><a href="/page/about-vuejs/demo.shtml">demo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--主体End-->
+        <!--底部Start-->
+        <div class="footer">
+        </div>
+        <!--底部End-->
+    </div>
+    <script>
+        var dayBox = document.getElementsByClassName('jsSetDays');
+        var startTime = (new Date("2016/12/26 0:0:0")).getTime();
+        var nowTime = new Date().getTime();
+        var day = 1000*60*60*24;
+        var days = parseInt((nowTime - startTime)/day);
+        dayBox[0].innerHTML = days;
+    </script>
+</body>
+</html>

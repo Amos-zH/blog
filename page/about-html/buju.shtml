@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赵海</title>
+    <link rel="stylesheet" href="/assets/css/about-html/buju.css" />
+</head>
+<body>
+    <div class="body-container">
+        <!--#include virtual="/inc/header.shtml"-->
+        <!--主体Start-->
+        <div class="main-container">
+            <h1>圣杯布局</h1>
+            <div class="container1">
+                <div class="middle">中间弹性区域</div>
+                <div class="left">左边栏</div>
+                <div class="right">右边栏</div>
+            </div>
+            <h1>双飞翼布局</h1>
+            <div class="container3">
+                <div class="main-box">
+                    <div class="main-middle"></div>
+                </div>
+                <div class="left-box"></div>
+                <div class="right-box"></div>
+            </div>
+        </div>
+        <!--主体End-->
+    </div>
+</body>
+</html>
