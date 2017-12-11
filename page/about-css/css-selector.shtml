@@ -11,10 +11,10 @@
         <!--#include virtual="/inc/header.shtml"-->
         <!--主体Start-->
         <div class="main-container">
-            <ul class="article-list">
-                <li>
+            <ul class="list-contant">
+                <li class="list-li">
                     <b>CSS3 选择器——属性选择器</b>
-                    <a href="http://www.w3cplus.com/css3/attribute-selectors" target="_blank">详细</a>
+                    <a class="detail-url" href="http://www.w3cplus.com/css3/attribute-selectors" target="_blank">详细</a>
                     <ol>
                         <li><span class="important">E[attr]</span>：只使用属性名，但没有确定任何属性值；</li>
                         <li><span class="important">E[attr="value"]</span>：指定属性名，并指定了该属性的属性值；</li>
@@ -25,9 +25,9 @@
                         <li><span class="important">E[attr|="value"]</span>：指定了属性名，并且属性值是value或者以“value-”开头的值（比如说zh-cn）；</li>
                     </ol>
                 </li>
-                <li>
+                <li class="list-li">
                     <b>CSS3 选择器——伪类选择器</b>
-                    <a href="https://www.w3cplus.com/css3/pseudo-class-selector" target="_blank">详细</a>
+                    <a class="detail-url" href="https://www.w3cplus.com/css3/pseudo-class-selector" target="_blank">详细</a>
                     <ol>
                         <li><span class="important">:hover</span>用于当用户把鼠标移动到元素上面时的效果；</li>
                         <li><span class="important">:active</span>用于用户点击元素那一下的效果（正发生在点的那一下，松开鼠标左键此动作也就完成了）；</li>

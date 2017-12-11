@@ -12,9 +12,9 @@
         <!--主体Start-->
         <div class="main-container">
             <h1>易忘记css</h1>
-            <ul class="article-list">
-                <li><span class="important">word-wrap: normal|break-word;</span>允许长单词或 URL 地址换行到下一行。</li>
-                <li><span class="important">word-break: normal|break-all允许在单词内换行|keep-all只能在半角空格或连字符处换行;</span>规定自动换行的处理方法。</li>
+            <ul class="list-contant">
+                <li class="list-li"><span class="important">word-wrap: normal|break-word;</span>允许长单词或 URL 地址换行到下一行。</li>
+                <li class="list-li"><span class="important">word-break: normal|break-all允许在单词内换行|keep-all只能在半角空格或连字符处换行;</span>规定自动换行的处理方法。</li>
             </ul>
         </div>
         <!--主体End-->

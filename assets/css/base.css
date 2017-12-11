@@ -112,15 +112,53 @@ a,input[type="input"],input[type="button"]{ cursor: pointer; }
     margin: 20px auto 0 auto;
 }
 .main-container{
-    width: 1200px;
+    width: 1180px;
     min-height: 868px;
     margin: 20px auto 0 auto;
     background: #f8f8fd;
-    border: 1px solid #c0c0c0;
+    padding: 10px;
     box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5), 0 0 30px rgba(10, 10, 0, 0.1) inset;
 }
 h1{
     font-size: 20px;
     margin: 10px 0 10px 0;
     padding: 0 10px;
+}
+.list-contant{
+    padding: 0 30px;
+    font-size: 14px;
+}
+.list-contant pre{
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+    background: rgba(126, 136, 109, 0.24);
+}
+.list-li{
+    list-style: disc;
+    margin-top: 10px;
+    font: 16px/1.5 red;
+}
+.list-li ol{
+    padding: 0 26px;
+}
+.list-li-sub:before{
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.detail-url{
+    color: #666;
+    border-bottom: 1px dashed #999;
+    float: right;
+}
+.detail-url:hover{
+    text-decoration: none;
+}
+.important{
+    color: #FF3C1D;
 }
