@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>赵海</title>
-    <link rel="stylesheet" href="/assets/css/about-css/selector.css" />
+    <link rel="stylesheet" href="/assets/css/about-css/css-basic.css" />
     <link href="/favicon.ico" rel="SHORTCUT ICON" />
 </head>
 <body>
@@ -12,9 +12,21 @@
         <!--主体Start-->
         <div class="main-container">
             <h1>易忘记css</h1>
-            <ul class="list-contant">
-                <li class="list-li"><span class="important">word-wrap: normal|break-word;</span>允许长单词或 URL 地址换行到下一行。</li>
-                <li class="list-li"><span class="important">word-break: normal|break-all允许在单词内换行|keep-all只能在半角空格或连字符处换行;</span>规定自动换行的处理方法。</li>
+            <ul class="list-contant li-list">
+                <li><span class="important">word-wrap: normal|break-word;</span>允许长单词或 URL 地址换行到下一行。</li>
+                <li><span class="important">word-break: normal|break-all允许在单词内换行|keep-all只能在半角空格或连字符处换行;</span>规定自动换行的处理方法。</li>
+            </ul>
+            <h1>重要的CSS3</h1>
+            <ul class="list-contant li-list">
+                <li>
+                    <b>css3属性text-fill-color--文字效果</b>
+                    <a class="detail-url" href="" target="_blank">详细</a>
+                    <div class="masked">
+                        <h4>这是一行文字遮罩动画</h4>
+                        <h5>这是一行镂空文字</h5>
+                        <h3>这是一行渐变色文字</h3>
+                    </div>
+                </li>
             </ul>
         </div>
         <!--主体End-->

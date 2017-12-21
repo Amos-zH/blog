@@ -11,11 +11,11 @@
         <!--#include virtual="/inc/header.shtml"-->
         <!--主体Start-->
         <div class="main-container">
-            <ul class="list-contant">
-                <li class="list-li">
+            <ul class="list-contant li-list">
+                <li>
                     <b>CSS3 选择器——属性选择器</b>
                     <a class="detail-url" href="http://www.w3cplus.com/css3/attribute-selectors" target="_blank">详细</a>
-                    <ol>
+                    <ol class="ol-list">
                         <li><span class="important">E[attr]</span>：只使用属性名，但没有确定任何属性值；</li>
                         <li><span class="important">E[attr="value"]</span>：指定属性名，并指定了该属性的属性值；</li>
                         <li><span class="important">E[attr~="value"]</span>：指定属性名，并且有属性值，此属性值是一个词列表，并且以空格隔开，其中词列表中包含了一个value词，而且等号前面的“〜”不能不写；</li>
@@ -25,10 +25,10 @@
                         <li><span class="important">E[attr|="value"]</span>：指定了属性名，并且属性值是value或者以“value-”开头的值（比如说zh-cn）；</li>
                     </ol>
                 </li>
-                <li class="list-li">
+                <li>
                     <b>CSS3 选择器——伪类选择器</b>
                     <a class="detail-url" href="https://www.w3cplus.com/css3/pseudo-class-selector" target="_blank">详细</a>
-                    <ol>
+                    <ol class="ol-list">
                         <li><span class="important">:hover</span>用于当用户把鼠标移动到元素上面时的效果；</li>
                         <li><span class="important">:active</span>用于用户点击元素那一下的效果（正发生在点的那一下，松开鼠标左键此动作也就完成了）；</li>
                         <li><span class="important">:focus</span>用于元素成为焦点，这个经常用在表单元素上；</li>

@@ -12,7 +12,7 @@
         <!--主体Start-->
         <div class="main-container">
             <h1>HTML中属于布尔类型的属性</h1>
-            <ol class="body-list1">
+            <ol class="list-contant ol-list">
                 <li><span class="important">noshade</span>,用来表示有无阴影，多用于在&lt;hr /&gt;标签当中;</li>
                 <li><span class="important">ckecked</span>,用来表示是否默认选中，多用于单选按钮&lt;input type="radio" /&gt;和多选按钮&lt;input type="checkbox" /&gt;中，需要注意的是，在&lt;input type="radio" /&gt;中需要用相同的name才能达到单选框的效果;</li>
                 <li><span class="important">selected</span>,用来表示是否优先显示，用于下拉表单&lt;select&gt;&lt;/select&gt;和只能下拉表单&lt;datalist&gt;中;</li>
@@ -22,7 +22,7 @@
                 <li><span class="important">require</span>,用来表示必须选择，多用于&lt;input /&gt;标签中</li>
             </ol>
             <h1>HTML编码规范</h1>
-            <ol class="body-list1">
+            <ol class="list-contant ol-list">
                 <li><span class="important">class</span> 必须单词全字母小写，单词间以 - 分隔</li>
                 <li><span class="important">class</span> 必须代表相应模块或部件的内容或功能，不得以样式信息进行命名。</li>
                 <li>元素 <span class="important">id</span> 必须保证页面唯一。</li>

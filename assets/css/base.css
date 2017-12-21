@@ -126,7 +126,10 @@ h1{
 }
 .list-contant{
     padding: 0 30px;
-    font-size: 14px;
+    font-size: 16px;
+}
+.list-contant li {
+    line-height: 2;
 }
 .list-contant pre{
     font-weight: bold;
@@ -134,12 +137,13 @@ h1{
     margin-left: 10px;
     background: rgba(126, 136, 109, 0.24);
 }
-.list-li{
+.li-list li{
     list-style: disc;
-    margin-top: 10px;
-    font: 16px/1.5 red;
 }
-.list-li ol{
+.ol-list li{
+    list-style: decimal;
+}
+.li-list li ol{
     padding: 0 26px;
 }
 .list-li-sub:before{
