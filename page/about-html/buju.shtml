@@ -24,6 +24,16 @@
                 <div class="left-box"></div>
                 <div class="right-box"></div>
             </div>
+            <h1>等高多列布局</h1>
+            <div class="space3">
+                <div class="space2">
+                    <div class="space1">
+                        <div class="block1">1</div>
+                        <div class="block2">2<br>2</div>
+                        <div class="block3">3<br>3<br>3<br>3<br>3</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--主体End-->
     </div>

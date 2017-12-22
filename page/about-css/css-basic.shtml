@@ -13,8 +13,11 @@
         <div class="main-container">
             <h1>易忘记css</h1>
             <ul class="list-contant li-list">
-                <li><span class="important">word-wrap: normal|break-word;</span>允许长单词或 URL 地址换行到下一行。</li>
-                <li><span class="important">word-break: normal|break-all允许在单词内换行|keep-all只能在半角空格或连字符处换行;</span>规定自动换行的处理方法。</li>
+                <li><span class="important">word-wrap</span>:break-word;允许长单词或 URL 地址换行到下一行。</li>
+                <li><span class="important">white-space</span>:pre空白会被浏览器保留 | nowrap文本不会换行<div></div></li>
+                <li><span class="important">word-break</span>:break-all允许在单词内换行 | keep-all只能在半角空格或连字符处换行;</li>
+                <li><span class="important">z-index</span>: number<div class="tips">失效的情况：1、父标签position为relative 2、本身无position属性 3、本身是float属性</div></li>
+                <li><span class="important">text-overflow</span>:clip修剪文本 | ellipsis省略符号来代表被修剪的文本 | string给定的字符串来代表被修剪的文本<div class="tips">需要块级元素，配合white-space:nowrap;overflow:hidden;才生效</div></li>
             </ul>
             <h1>重要的CSS3</h1>
             <ul class="list-contant li-list">
@@ -26,6 +29,17 @@
                         <h5>这是一行镂空文字</h5>
                         <h3>这是一行渐变色文字</h3>
                     </div>
+                </li>
+                <li>
+                    <b>css3属性user-modify--页面文本编辑</b>
+                    <a class="detail-url" href="http://www.zhangxinxu.com/wordpress/2016/01/contenteditable-plaintext-only/" target="_blank">详细</a>
+                    <div class="css-value">属性值：read-only；read-write；read-write-plaintext-only；
+                        <span>兼容性：只支持webkit内核或移动端</span>
+                    </div>
+                    <ol class="ol-list textbox">
+                        <li style="-webkit-user-modify: read-write;">write-only：支持富文本</li>
+                        <li style="-webkit-user-modify: read-write-plaintext-only;">read-write-plaintext-only：纯文本</li>
+                    </ol>
                 </li>
             </ul>
         </div>

@@ -54,3 +54,45 @@
     background: blue;
     margin-left: -100px;
 }
+.space1 {
+    float: left;
+    width: 100%;
+    background: #FFE6B0;
+    position: relative;
+    right: 40%;
+}
+.space2 {
+    float: left;
+    width: 100%;
+    background: #4b72a4;
+    position: relative;
+    right: 30%;
+}
+.space3 {
+    float: left;
+    width: 100%;
+    background: #B5B5B5;
+    position: relative;
+    overflow: hidden;
+}
+.block1 {
+    float: left;
+    background: #FFE6B0;
+    width: 30%;
+    position: relative;
+    left: 70%;
+}
+.block2 {
+    float: left;
+    background: #4b72a4;
+    width: 40%;
+    position: relative;
+    left: 70%;
+}
+.block3 {
+    float: left;
+    background: #B5B5B5;
+    width: 30%;
+    position: relative;
+    left: 70%;
+}
