@@ -13,11 +13,16 @@
         <div class="main-container">
             <h1>易忘记css</h1>
             <ul class="list-contant li-list">
-                <li><span class="important">word-wrap</span>:break-word;允许长单词或 URL 地址换行到下一行。</li>
+                <li>CSS3<span class="important">word-wrap</span>:break-word;允许长单词或 URL 地址换行到下一行。</li>
                 <li><span class="important">white-space</span>:pre空白会被浏览器保留 | nowrap文本不会换行<div></div></li>
-                <li><span class="important">word-break</span>:break-all允许在单词内换行 | keep-all只能在半角空格或连字符处换行;</li>
-                <li><span class="important">z-index</span>: number<div class="tips">失效的情况：1、父标签position为relative 2、本身无position属性 3、本身是float属性</div></li>
-                <li><span class="important">text-overflow</span>:clip修剪文本 | ellipsis省略符号来代表被修剪的文本 | string给定的字符串来代表被修剪的文本<div class="tips">需要块级元素，配合white-space:nowrap;overflow:hidden;才生效</div></li>
+                <li>CSS3<span class="important">word-break</span>:break-all允许在单词内换行 | keep-all只能在半角空格或连字符处换行;</li>
+                <li><span class="important">z-index</span>:number<div class="tips">失效的情况：1、父标签position为relative 2、本身无position属性 3、本身是float属性</div></li>
+                <li>CSS3<span class="important">text-overflow</span>:clip修剪文本; | ellipsis省略符号来代表被修剪的文本; | string给定的字符串来代表被修剪的文本;<div class="tips">需要块级元素，配合white-space:nowrap;overflow:hidden;才生效</div></li>
+                <li>CSS3<span class="important">text-shadow</span><span style="text-shadow:5px 5px 5px #FF0000;">:可向文本应用阴影。能够规定水平阴影、垂直阴影、模糊距离，以及阴影的颜色;</span></li>
+                <li>CSS3<span class="important">column-count</span>:auto | number规定元素应该被划分的列数;</li>
+                <li>CSS3<span class="important">resize</span>:none无法调整元素的尺寸; | both可调整元素的高度和宽度; | horizontal可调整元素的宽度; | vertical可调整元素的高度;<div class="tips">此属性生效，需要设置元素的 overflow 属性，值可以是 auto、hidden 或 scroll</div></li>
+                <li>CSS<span class="important">outline</span>:outline-color | outline-style | outline-width<div style="outline:#00FF00 inset thick;border: 1px solid red;">绘制于元素周围的一条线，位于边框边缘的外围</div></li>
+                <li>CSS3<span class="important">outline-offset</span>:length轮廓与边框边缘的距离;<div style="outline:#00FF00 inset thick;outline-offset: 2px;border: 1px solid red;">对轮廓进行偏移，并在边框边缘进行绘制</div></li>
             </ul>
             <h1>重要的CSS3</h1>
             <ul class="list-contant li-list">
@@ -40,6 +45,14 @@
                         <li style="-webkit-user-modify: read-write;">write-only：支持富文本</li>
                         <li style="-webkit-user-modify: read-write-plaintext-only;">read-write-plaintext-only：纯文本</li>
                     </ol>
+                </li>
+                <li>
+                    <b>CSS3属性@media</b>
+                    <a class="detail-url" href="https://www.w3cways.com/1180.html" target="_blank">详细</a>
+                    <div class="block1">
+                        浏览器宽度大于500小于800px时黄色；<br/>浏览器宽度小于500px时绿色；<br/>浏览器宽度大于800px时蓝色；
+                        打印时隐藏
+                    </div>
                 </li>
             </ul>
         </div>

@@ -42,3 +42,26 @@
 .tips {
     background: #FFE6B0;
 }
+.block1 {
+    height: 100px;
+    border: 1px solid #ff8080;
+    overflow: auto;
+    background: #ffab2e;
+    color: #fff;
+}
+@media screen and (max-width: 700px){
+    .block1 {
+        background: #00B83F;
+    }
+}
+@media screen and (min-width: 1000px){
+    .block1 {
+        background: #0e65af;
+    }
+}
+
+@media print {
+    .block1 {
+        display: none;
+    }
+}

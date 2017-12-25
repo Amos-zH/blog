@@ -47,6 +47,17 @@
                 <li>有文本标题的控件必须使用 <span class="important">label</span> 标签将其与其标题相关联。</li>
                 <li>使用 <span class="important">button</span> 元素时必须指明 type 属性值。</li>
             </ol>
+            <h1>重要的H5标签</h1>
+            <ol class="list-contant ol-list">
+                <li><span class="important">mark:</span><mark>用来展示高亮的文字</mark></li>
+                <li><span class="important">progress:</span>下载进度：<progress value="22" max="100"></progress></li>
+                <li><span class="important">meter:</span>显示度量值：<meter value="3" min="0" max="10">3/10</meter></li>
+                <li><span class="important">details:</span>描述文档或文档某个部分的细节：<details><summary style="outline: none">summary标签</summary>包含details元素的标题</details></li>
+                <li><span class="important">datalist:</span>定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值：
+                    <input list="cars" />
+                    <datalist id="cars"><option value="BMW"><option value="Ford"><option value="Volvo"></datalist>
+                </li>
+            </ol>
         </div>
         <!--主体End-->
     </div>
