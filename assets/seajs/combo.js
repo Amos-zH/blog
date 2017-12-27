@@ -316,7 +316,7 @@ function isComboUri(uri) {
 }
 
 
-  // For TEST
+  // For plug-in
 if (data.test) {
   var test = seajs.test || (seajs.test = {})
   test.uris2paths = uris2paths

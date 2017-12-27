@@ -33,7 +33,7 @@
 // 
 // Information about what version or versions of jQuery this plugin has been
 // tested with, what browsers it has been tested in, and where the unit tests
-// reside (so you can test it yourself).
+// reside (so you can plug-in it yourself).
 // 
 // jQuery Versions - 1.3.2, 1.4.1, 1.4.2
 // Browsers Tested - Internet Explorer 6-8, Firefox 2-3.6, Safari 3-4, Chrome, Opera 9.6-10.1.
@@ -132,7 +132,7 @@
     setup: function() {
       // Since window has its own native 'resize' event, return false so that
       // jQuery will bind the event using DOM methods. Since only 'window'
-      // objects have a .setTimeout method, this should be a sufficient test.
+      // objects have a .setTimeout method, this should be a sufficient plug-in.
       // Unless, of course, we're throttling the 'resize' event for window.
       if ( !jq_resize[ str_throttle ] && this[ str_setTimeout ] ) { return false; }
       
@@ -154,7 +154,7 @@
     teardown: function() {
       // Since window has its own native 'resize' event, return false so that
       // jQuery will unbind the event using DOM methods. Since only 'window'
-      // objects have a .setTimeout method, this should be a sufficient test.
+      // objects have a .setTimeout method, this should be a sufficient plug-in.
       // Unless, of course, we're throttling the 'resize' event for window.
       if ( !jq_resize[ str_throttle ] && this[ str_setTimeout ] ) { return false; }
       
