@@ -4,10 +4,17 @@
 var load  = {
 	init:function () {
 		this.bindEvent();
-		this.initUploadBtn('loadbtn2',function (file, src) {
-			var _li = '<li filepath="' + src + '"><img style="width:50px;height:50px;" src="' + src + '" title="' + file.name + '"/>' +
-				'<p><a onclick="delFile(this)"><i class="icon icon-close-md"></i></a></p></li>';
-			$("#trafficFileList").append(_li);
+		this.initUploadBtn('loadbtn4',function (file, src) {
+			var _li = '<li filepath="' + src + '"><img style="width:50px;height:50px;" src="' + src + '" title="' + file.name + '"/></li>';
+			$(".load2-box").append(_li);
+		});
+		//添加附件初始化
+		var ids = new Array("loadbtn1","loadbtn2","loadbtn3");
+		$.each(ids,function(i,n){
+			var self = this.toString();
+			load.initUploadBtn(self,function (file) {
+				$('#'+self).siblings('.upload-text').val(file.name);
+			});
 		});
 	},
 	bindEvent:function () {

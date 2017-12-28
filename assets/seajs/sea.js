@@ -22,7 +22,7 @@ seajs.config({alias: {
     "serializejson":"about-js/libs/jquery.serializejson.about-js",
     "scrollbar":"about-js/libs/jquery.mCustomScrollbar.min.about-js",
     "ztree":"about-js/libs/jquery.ztree.core.about-js",     //结构树
-    "Wdate":"about-js/libs/MdatePicker/WdatePicker.about-js",           //datepicker97
+    "Wdate":"about-js/libs/MdatePicker/MdatePicker.about-js",           //datepicker97
     "datetimepicker":"about-js/libs/jquery.datetimepicker.about-js",
     "moment":"about-js/libs/moment.min.about-js",
     "fullcalendar":"about-js/libs/fullcalendar.min.about-js",//日程插件

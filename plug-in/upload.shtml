@@ -21,15 +21,26 @@
         </div>
         <!--头部End-->
         <div class="main-container">
-            <div class="upload-box">
-                <input type="text" class="upload-text" readonly>
-                <a href="javascript:void(0);" class="upload-btn" id="loadbtn1">添加附件</a>
-            </div>
-            <div>
-                <a href="javascript:void(0);" class="upload-btn" id="loadbtn2">添加附件</a>
-                <ul id="trafficFileList">
-                </ul>
-            </div>
+            <ul class="list-contant li-list">
+                <li>
+                    <div class="upload-box">
+                        <input type="text" class="upload-text" readonly>
+                        <a href="javascript:void(0);" class="upbtn upload-btn1" id="loadbtn1">添加附件</a>
+                    </div>
+                    <div class="upload-box">
+                        <input type="text" class="upload-text" readonly>
+                        <a href="javascript:void(0);" class="upbtn upload-btn1" id="loadbtn2">添加附件</a>
+                    </div>
+                    <div class="upload-box">
+                        <input type="text" class="upload-text" readonly>
+                        <a href="javascript:void(0);" class="upbtn upload-btn1" id="loadbtn3">添加附件</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="upbtn upload-btn2" id="loadbtn4">添加附件</a>
+                    <ul class="load2-box"></ul>
+                </li>
+            </ul>
         </div>
     </div>
     <script src="/assets/js/modules/plug-in/upload.js"></script>

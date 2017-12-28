@@ -138,6 +138,7 @@ h1{
     background: rgba(126, 136, 109, 0.24);
 }
 .li-list li{
+    position: relative;
     list-style: disc;
 }
 .ol-list li{
@@ -165,4 +166,14 @@ h1{
 }
 .important{
     color: #FF3C1D;
+}
+.icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../img/public/icon.png) no-repeat;
+    vertical-align: middle;
+}
+.icon-date {
+    background-position: -49px -246px;
 }

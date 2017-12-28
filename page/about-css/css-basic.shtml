@@ -27,7 +27,7 @@
             <h1>重要的CSS3</h1>
             <ul class="list-contant li-list">
                 <li>
-                    <b>css3属性text-fill-color--文字效果</b>
+                    <b>CSS3属性text-fill-color--文字效果</b>
                     <a class="detail-url" href="" target="_blank">详细</a>
                     <div class="masked">
                         <h4>这是一行文字遮罩动画</h4>
@@ -36,7 +36,7 @@
                     </div>
                 </li>
                 <li>
-                    <b>css3属性user-modify--页面文本编辑</b>
+                    <b>CSS3属性user-modify--页面文本编辑</b>
                     <a class="detail-url" href="http://www.zhangxinxu.com/wordpress/2016/01/contenteditable-plaintext-only/" target="_blank">详细</a>
                     <div class="css-value">属性值：read-only；read-write；read-write-plaintext-only；
                         <span>兼容性：只支持webkit内核或移动端</span>
