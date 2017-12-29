@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>赵海</title>
     <link href="/favicon.ico" rel="SHORTCUT ICON" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/vueDemo.css" />
     <script src="/assets/js/libs/jquery-1.8.3.min.js"></script>
     <script src="/assets/js/libs/vue.js"></script>
 </head>
@@ -52,6 +52,10 @@
                     {{ item.message }}
                 </li>
             </ul>
+            <div id="demo3">
+                <p v-for="plist in plists" v-on:click="selected" v-bind:class="{ choose: plist.ischoose }"><span class="goodsName">{{ plist.name }}</span><span class="goodsPrice">{{ plist.price }}</span></p>
+                <div><span>合计：</span><span class="total">{{ price }}</span></div>
+            </div>
         </div>
         <!--主体End-->
     </div>
@@ -70,10 +74,28 @@
         var list = new Vue({
             el: '#demo2',
             data: {
-                item:[
+                items:[
                     { message:'foo' },
                     { message:'ioo' }
                 ]
+            }
+        });
+        var goodsPrice = new Vue({
+            el: "#demo3",
+            data: {
+                price : 11,
+                plists: [
+                    { name: 'goods1', price: '100', ischoose : false },
+                    { name: 'goods2', price: '200', ischoose : false },
+                    { name: 'goods3', price: '300', ischoose : false }
+                ]
+            },
+            methods: {
+                selected: function (event) {debugger
+                    if (event) {
+                        this.plists.ischoose = true
+                    }
+                }
             }
         })
     </script>

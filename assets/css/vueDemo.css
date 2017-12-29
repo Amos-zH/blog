@@ -1,0 +1,25 @@
+@import url(base.css);
+#demo3 p, #demo3 div{
+    margin: 0 auto;
+    width: 50%;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+    background: #66a6e7;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+.goodsName {
+    float: left;
+}
+.goodsPrice {
+    float: right;
+    margin-right: 20px;
+}
+.total {
+    float: right;
+}
+#demo3 .choose {
+    background: #00ee00;
+}
