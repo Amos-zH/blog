@@ -13,88 +13,123 @@
         <!--#include virtual="/inc/header.shtml"-->
         <!--主体Start-->
         <div class="main-container">
-            <div id="demo">
-                <p>{{ message }}</p>
-                <input type="text" v-model="message">
-                <h1>v-if指令是根据条件表达式的值来执行元素的插入或者删除行为。</h1>
-                <h1 v-if="yes">Yes!</h1>
-                <h1 v-if="no">No!</h1>
-                <h1 v-if="age >= 25">Age: {{ age }}</h1>
-                <h1 v-if="name.indexOf('jack') >= 0">Name: {{ name }}</h1>
-                <h1>v-show指令是根据条件表达式的值来设置元素的css的style="display:;"属性。</h1>
-                <h2 v-show="yes">Yes!</h2>
-                <h2 v-show="no">No!</h2>
-                <h2 v-show="age >= 25">Age: {{ age }}</h2>
-                <h2 v-show="name.indexOf('jack') >= 0">Name: {{ name }}</h2>
-                <h1>可以用v-else指令为v-if或v-show添加一个“else块”。v-else元素必须立即跟在v-if或v-show元素的后面——否则它不能被识别</h1>
-                <h1 v-if="age >= 25">Age: {{ age }}</h1>
-                <h2 v-else>Name: {{ name }}</h2>
-                <h2 v-else-if="yes">yes</h2>
-                <h2>---------------------分割线---------------------</h2>
-                <h2 v-show="name.indexOf('jack') >= 0">Name: {{ name }}</h2>
-
-                <template v-if="yes">
-                    <h2>显示</h2>
-                    <h2>一块</h2>
-                    <h2>区域</h2>
-                </template>
-                <template v-if="age >= 25">
-                    <label>Name：</label>
-                    <input type="text" placeholder="输入名字" key="name">
-                </template>
-                <template v-else>
-                    <label>Email：</label>
-                    <input type="text" placeholder="输入邮箱" key="email">
-                </template>
-            </div>
-            <ul id="demo2">
-                <li v-for="item in items">
-                    {{ item.message }}
+            <h1>条件渲染</h1>
+            <ol class="list-contant ol-list">
+                <li id="demo1">
+                    <b class="important">v-if="age > 25"</b>
+                    <span v-if="age > 25">Age: {{ age }}</span>
+                    <span v-else-if="age < 15">yes</span>
+                    <span v-else>Name: {{ name }}</span>
+                    <input type="text" v-model="age" placeholder="输入age的值来切换显示">
+                    <p>可以用v-else指令为v-if添加一个“else块”。v-else或v-else-if元素必须立即跟在v-if元素的后面——否则它不能被识别</p>
+                </li>
+                <li id="demo2">
+                    <b>v-show</b>
+                    <h2 v-show="name.indexOf('jack') >= 0">Name: {{ name }}</h2>
+                    <p>v-show相当于设置display属性，v-show 不支持 template 元素，也不支持 v-else。</p>
+                </li>
+                <li id="demo3">
+                    <b>template</b>
+                    <template v-if="loginTypes === 'username'">
+                        <label>Name：</label>
+                        <input type="text" placeholder="输入名字" key="name">
+                    </template>
+                    <template v-else>
+                        <label>Email：</label>
+                        <input type="text" placeholder="输入邮箱" key="email">
+                    </template>
+                    <a href="javascript:void(0)" @click="loginType()">Toggle login type</a>
+                </li>
+            </ol>
+            <h1>列表渲染</h1>
+            <ul id="demo4" class="list-contant li-list">
+                <li v-for="(item, index) in items">
+                    {{ item.message }} - {{ index }}
                 </li>
             </ul>
-            <div id="demo3">
-                <p v-for="plist in plists" v-on:click="selected" v-bind:class="{ choose: plist.ischoose }"><span class="goodsName">{{ plist.name }}</span><span class="goodsPrice">{{ plist.price }}</span></p>
-                <div><span>合计：</span><span class="total">{{ price }}</span></div>
+            <ul id="demo4-1" class="list-contant li-list">
+                <li v-for="(value, key, index) in object">
+                    {{ index }},{{ key }}:{{ value }}
+                </li>
+            </ul>
+            <h1>合计总价实例</h1>
+            <div id="demo5">
+                <p v-for="plist in plists" v-on:click="selected(plist)" v-bind:class="{ choose: plist.ischoose }"><span class="goodsName">{{ plist.name }}</span><span class="goodsPrice">{{ plist.price }}</span></p>
+                <div><span>合计：</span><span class="total">{{ priceAll() }}</span></div>
             </div>
         </div>
         <!--主体End-->
     </div>
     <script>
         new Vue({
-            el: '#demo',
+            el: '#demo1',
             data:{
-                message:'Hello Vuejs!',
-                yes:true,
-                no:false,
-                age:28,
-                name:'jack.Tom',
-                sex:'male'
+                age: ''
             }
         });
-        var list = new Vue({
+
+        new Vue({
             el: '#demo2',
+            data:{
+                name:'jack.Tom'
+            }
+        });
+
+        new Vue({
+            el: '#demo3',
+            data :{
+                loginTypes:'username'
+            },
+            methods: {
+                loginType:function () {
+                    return this.loginTypes = this.loginTypes === 'username' ? 'email' : 'username';
+                }
+            }
+        });
+
+        var list = new Vue({
+            el: '#demo4',
             data: {
                 items:[
-                    { message:'foo' },
-                    { message:'ioo' }
+                    { message:'first' },
+                    { message:'second' }
                 ]
             }
         });
-        var goodsPrice = new Vue({
-            el: "#demo3",
+
+        new Vue({
+            el: '#demo4-1',
             data: {
-                price : 11,
+                object:{
+                    firstName: 'John',
+                    lastName: 'Doe',
+                    age: 30
+                }
+            }
+        });
+
+        var goodsPrice = new Vue({
+            el: '#demo5',
+            data: {
                 plists: [
-                    { name: 'goods1', price: '100', ischoose : false },
-                    { name: 'goods2', price: '200', ischoose : false },
-                    { name: 'goods3', price: '300', ischoose : false }
+                    { name: 'goods1', price: 100, ischoose : false },
+                    { name: 'goods2', price: 200, ischoose : false },
+                    { name: 'goods3', price: 300, ischoose : false }
                 ]
             },
             methods: {
-                selected: function (event) {debugger
+                selected: function (event) {
                     if (event) {
-                        this.plists.ischoose = true
+                        event.ischoose = !event.ischoose;
                     }
+                },
+                priceAll: function () {
+                    var priceAll = 0;
+                    this.plists.forEach(function (i) {
+                        if (i.ischoose)
+                            priceAll += i.price;
+                    });
+                    return priceAll;
                 }
             }
         })

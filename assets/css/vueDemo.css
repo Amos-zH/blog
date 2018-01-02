@@ -1,5 +1,5 @@
 @import url(base.css);
-#demo3 p, #demo3 div{
+#demo5 p, #demo5 div{
     margin: 0 auto;
     width: 50%;
     line-height: 30px;
@@ -20,6 +20,6 @@
 .total {
     float: right;
 }
-#demo3 .choose {
+#demo5 .choose {
     background: #00ee00;
 }
