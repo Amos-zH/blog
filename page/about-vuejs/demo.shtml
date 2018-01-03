@@ -43,14 +43,17 @@
             </ol>
             <h1>列表渲染</h1>
             <ul id="demo4" class="list-contant li-list">
-                <li v-for="(item, index) in items">
+                <li v-for="(item, index) in items" :key="item.id" @click="sss(item)">
                     {{ item.message }} - {{ index }}
                 </li>
             </ul>
             <ul id="demo4-1" class="list-contant li-list">
                 <li v-for="(value, key, index) in object">
-                    {{ index }},{{ key }}:{{ value }}
+                    {{ index + 1 }},{{ key }}:{{ value }}
                 </li>
+            </ul>
+            <ul id="demo4-2">
+                <li v-for="n in getNumbers" style="display: inline-block;margin-right: 10px">{{ n }}</li>
             </ul>
             <h1>合计总价实例</h1>
             <div id="demo5">
@@ -87,17 +90,23 @@
             }
         });
 
-        var list = new Vue({
+        var arr1 = new Vue({
             el: '#demo4',
             data: {
                 items:[
-                    { message:'first' },
-                    { message:'second' }
+                    { message:'first', id:'a1' },
+                    { message:'second', id:'a2' }
                 ]
+            },
+            methods: {
+                sss:function (e) {
+                    console.log(e.id);
+                    arr1.items.push({ message: 'Baz', id:'a3' })
+                }
             }
         });
 
-        new Vue({
+        var arr2 = new Vue({
             el: '#demo4-1',
             data: {
                 object:{
@@ -107,8 +116,27 @@
                 }
             }
         });
+        Vue.set(arr2.object, 'sex', 'man');     //向已有对象添加一个属性
+        arr2.object = Object.assign({}, arr2.object, {      //为已有对象赋予多个新属性
+            age: 27,
+            favoriteColor: 'Vue Green'
+        });
 
-        var goodsPrice = new Vue({
+        var arr3 = new Vue({
+            el:'#demo4-2',
+            data: {
+                numbers: [1,2,3,4,5,6]
+            },
+            computed: {
+                getNumbers: function () {
+                    return this.numbers.filter(function (number) {
+                        return number % 2 === 0;
+                    })
+                }
+            }
+        });
+
+        new Vue({
             el: '#demo5',
             data: {
                 plists: [
