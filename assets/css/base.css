@@ -1,5 +1,6 @@
 @charset "utf-8";
 /*初始化css样式*/
+html, body { height: 100%; overflow: hidden; }
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
 body, button, input, select, textarea { font:12px/1.5 "\5FAE\8F6F\96C5\9ED1","Microsoft Yahei",arial,"Hiragino Sans GB",tahoma,"\5B8B\4F53" }
 h1, h2, h3, h4, h5, h6{ font-size:100%; }
@@ -48,7 +49,7 @@ a,input[type="input"],input[type="button"]{ cursor: pointer; }
     background-size: cover;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .header{
     height: 60px;
@@ -107,8 +108,8 @@ a,input[type="input"],input[type="button"]{ cursor: pointer; }
 }
 .main{
     width: 1200px;
-    height: 100%;
-    min-height: 708px;
+    /*height: 100%;*/
+    /*min-height: 708px;*/
     margin: 20px auto 0 auto;
 }
 .main-container{
