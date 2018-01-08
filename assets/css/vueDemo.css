@@ -23,3 +23,14 @@
 #demo5 .choose {
     background: #00ee00;
 }
+#demo6 {
+    width: 400px;
+    margin: 0 auto;
+}
+.todolist {
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    background: #00B83F;
+}

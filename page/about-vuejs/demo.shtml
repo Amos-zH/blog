@@ -60,6 +60,14 @@
                 <p v-for="plist in plists" v-on:click="selected(plist)" v-bind:class="{ choose: plist.ischoose }"><span class="goodsName">{{ plist.name }}</span><span class="goodsPrice">{{ plist.price }}</span></p>
                 <div><span>合计：</span><span class="total">{{ priceAll() }}</span></div>
             </div>
+            <h1>TodoLists</h1>
+            <div id="demo6">
+                <input type="text" placeholder="请输入文字..." v-model="newList">
+                <button @click="addList()">添加</button>
+                <ul>
+                    <li class="todolist" v-for="list in getLists">{{ list.text }}</li>
+                </ul>
+            </div>
         </div>
         <!--主体End-->
     </div>
@@ -67,7 +75,8 @@
         new Vue({
             el: '#demo1',
             data:{
-                age: ''
+                age: '',
+                name:'jack.Tom'
             }
         });
 
@@ -160,7 +169,27 @@
                     return priceAll;
                 }
             }
-        })
+        });
+    </script>
+    <script>
+        new Vue({
+            el: '#demo6',
+            data: {
+                newList: '',
+                getLists: []
+            },
+            watch: {
+                newList: function (newText) {
+                    return newText;
+                }
+            },
+            methods: {
+                addList: function () {
+                    console.log(this.newList);
+                    this.getLists.push({ text:this.newList });
+                }
+            }
+        });
     </script>
 </body>
 </html>
