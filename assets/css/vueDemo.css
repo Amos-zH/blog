@@ -7,7 +7,6 @@
     font-size: 16px;
     background: #66a6e7;
     overflow: hidden;
-    cursor: pointer;
     margin-bottom: 6px;
 }
 .goodsName {
@@ -28,9 +27,10 @@
     margin: 0 auto;
 }
 .todolist {
-    height: 30px;
-    line-height: 30px;
+    height: 45px;
+    line-height: 45px;
     font-size: 18px;
     color: #fff;
     background: #00B83F;
+    margin-bottom: 5px;
 }

@@ -62,9 +62,9 @@
             </div>
             <h1>TodoLists</h1>
             <div id="demo6">
-                <input type="text" placeholder="请输入文字..." v-model="newList">
+                <input type="text" placeholder="请输入文字..." v-model="newList" @keyup.enter="newList" style="width: 359px;">
                 <button @click="addList()">添加</button>
-                <ul>
+                <ul style="height: 200px;background: #eee;overflow-y: auto;margin-top: 5px">
                     <li class="todolist" v-for="list in getLists">{{ list.text }}</li>
                 </ul>
             </div>
