@@ -26,11 +26,24 @@
     width: 400px;
     margin: 0 auto;
 }
+.list-box {
+    height: 200px;
+    background: #eee;
+    overflow-y: auto;
+    margin-top: 5px;
+}
 .todolist {
+    position: relative;
     height: 45px;
     line-height: 45px;
     font-size: 18px;
     color: #fff;
-    background: #00B83F;
+    background: #354445;
     margin-bottom: 5px;
+}
+.posRight {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
 }
