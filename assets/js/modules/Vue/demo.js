@@ -112,8 +112,6 @@ new Vue({
         addList: function () {
             console.log(this.newList);
             this.getLists.push({ text:this.newList });
-        },
-        delectList: function () {
         }
     }
 });
