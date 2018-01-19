@@ -62,11 +62,19 @@
             </div>
             <h1>TodoLists实例</h1>
             <div id="demo6">
-                <input type="text" placeholder="请输入文字..." v-model="newList" @keyup.enter="addList()" style="width: 359px;">
-                <button @click="addList()">添加</button>
+                <input type="text" placeholder="请输入文字..." v-model="newList" @keyup.enter="addList" style="width: 343px;">
+                <button @click="addList">添加</button>
                 <ul class="list-box">
-                    <li class="todolist" v-for="(list, index) in getLists" :key="index" :title="list.text">{{ index + 1 }}：{{ list.text }}<i class="icon icon-close posRight" @click="getLists.splice(index, 1)"></i></li>
+                    <li :class="[todolistClass, { listCheckedBg:getLists[index].checked }]" v-for="(list, index) in getLists" :key="index">
+                        <label class="list-label" :title="list.text"><input type="checkbox" class="list-checkbox" v-model="getLists[index].checked">{{ index + 1 }}：{{ list.text }}:{{ getLists[index].checked }}</label>
+                        <i class="icon icon-close posRight" @click="getLists.splice(index, 1)"></i>
+                    </li>
                 </ul>
+                <div class="listOperate">
+                    <button @click="selectAll">不/全选</button>
+                    <button @click="clearSelect">清空选中项</button>
+                    <button @click="clearAll">清空所有</button>
+                </div>
             </div>
         </div>
         <!--主体End-->

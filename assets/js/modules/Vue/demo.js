@@ -101,6 +101,7 @@ new Vue({
     el: '#demo6',
     data: {
         newList: '',
+        todolistClass: 'todolist',
         getLists: []
     },
     watch: {
@@ -108,10 +109,33 @@ new Vue({
             return newText;
         }
     },
+    computed: {
+
+    },
     methods: {
+        //添加列表
         addList: function () {
             console.log(this.newList);
-            this.getLists.push({ text:this.newList });
+            this.getLists.push({ text:this.newList,checked: false });
+        },
+        //不/全选
+        selectAll: function () {
+            this.getLists.forEach(function (item, index) {
+                item.checked = !item.checked;
+            })
+        },
+        //清空所有列表
+        clearAll: function () {
+            this.getLists.splice(0, this.getLists.length);
+        },
+        //清空选中项
+        clearSelect: function () {
+            var arr = this.getLists;
+            for (var i=arr.length-1; i>=0; i--) {
+                if (arr[i].checked === true) {
+                    arr.splice(i, 1);
+                }
+            }
         }
     }
 });
