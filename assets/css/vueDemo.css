@@ -41,9 +41,14 @@
     background: #354445;
     padding: 0 10px;
     margin-bottom: 5px;
+    z-index: 1;
 }
 .listCheckedBg {
-    background: #15bd15;
+    height: 30px;
+    line-height: 30px;
+    background: #14d614;
+    color: #8D8D8D;
+    text-decoration: line-through;
 }
 .list-label {
     display: inline-block;
@@ -51,6 +56,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    text-decoration: inherit;
 }
 .list-checkbox {
     margin-right: 6px;
@@ -58,7 +64,8 @@
 .posRight {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
 }
 .listOperate {
@@ -75,4 +82,17 @@ button {
 }
 button:hover {
     opacity: 0.8;
+}
+/*动画效果*/
+.todolist {
+    transition: all .8s;
+    -moz-transition: all .8s; /* Firefox 4 */
+    -webkit-transition: all .8s; /* Safari 和 Chrome */
+    -o-transition: all .8s; /* Opera */
+}
+.todolist.listCheckedBg {
+    transition: all .4s;
+    -moz-transition: all .4s; /* Firefox 4 */
+    -webkit-transition: all .4s; /* Safari 和 Chrome */
+    -o-transition: all .4s; /* Opera */
 }

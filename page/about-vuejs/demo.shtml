@@ -66,7 +66,7 @@
                 <button @click="addList">添加</button>
                 <ul class="list-box">
                     <li :class="[todolistClass, { listCheckedBg:getLists[index].checked }]" v-for="(list, index) in getLists" :key="index">
-                        <label class="list-label" :title="list.text"><input type="checkbox" class="list-checkbox" v-model="getLists[index].checked">{{ index + 1 }}：{{ list.text }}:{{ getLists[index].checked }}</label>
+                        <label class="list-label" :title="list.text+'（鼠标右键编辑）'" @contextmenu.prevent="mouseRightEdit(list.text, index)"><input type="checkbox" class="list-checkbox" v-model="getLists[index].checked">{{ index + 1 }}：{{ list.text }}-----{{ getLists[index].checked }}</label>
                         <i class="icon icon-close posRight" @click="getLists.splice(index, 1)"></i>
                     </li>
                 </ul>

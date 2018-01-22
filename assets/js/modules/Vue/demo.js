@@ -136,6 +136,13 @@ new Vue({
                     arr.splice(i, 1);
                 }
             }
+        },
+        //鼠标右键编辑
+        mouseRightEdit: function (oldText, index) {
+            var newText = prompt('编辑文本', oldText);
+            if (newText !== null && newText !== '') {
+                Vue.set(this.getLists, index, { text:newText,checked: false });
+            }
         }
     }
 });
