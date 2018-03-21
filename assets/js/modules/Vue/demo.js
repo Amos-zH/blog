@@ -146,3 +146,84 @@ new Vue({
         }
     }
 });
+//全局注册组件
+Vue.component('my-component', {
+    template: '<div>{{ message }}</div>',
+    data: {
+        message: '我是组件'
+    }
+});
+new Vue({
+    el: '#demo7'
+});
+//局部注册组件
+var child = {
+    template: '<div>一个局部注册的组件</div>'
+};
+new Vue({
+    el:'#demo7-1',
+    components: {
+        'my-component': child
+    }
+});
+//is特性的使用
+var child = {
+    template: '<li>is特性的测试</li>'
+};
+new Vue ({
+    el: '#demo7-2',
+    components: {
+        'test': child
+    }
+});
+//data必须是函数
+Vue.component('testdata',{
+    template: '<li><button @click="num += 1">{{ num }}</button></li>',
+    data: function () {
+        return {
+            num: 0
+        }
+    }
+});
+new Vue({
+    el: '#demo7-3'
+});
+//组件组合
+Vue.component('child',{
+    props: ['myNum'],
+    template: '<span>{{ myNum }}</span>'
+});
+new Vue({
+    el: '#demo7-4',
+    data: {
+        proptext: 'proptext example'
+    }
+});
+//自定义事件
+Vue.component('text-button',{
+    template: '<div>' +
+        '<input type="text" v-model="message">'+
+        '<button @click="msgbtn">send</button>'+
+        '</div>',
+    data: function () {
+        return {
+            message: 'test'
+        }
+    },
+    methods: {
+        msgbtn: function () {
+            this.$emit('msg', { list: this.message })
+        }
+    }
+});
+new Vue({
+    el: '#demo7-5',
+    data: {
+        lists: []
+    },
+    methods: {
+        childmsg:function (payload) {
+            this.lists.push(payload.list);
+        }
+    }
+});

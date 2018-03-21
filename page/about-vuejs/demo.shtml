@@ -76,6 +76,29 @@
                     <button @click="clearAll">清空所有</button>
                 </div>
             </div>
+            <h1>组件</h1>
+            <div id="demo7">
+                <my-component></my-component>
+            </div>
+            <div id="demo7-1">
+                <my-component></my-component>
+            </div>
+            <ol id="demo7-2">
+                <li is="test"></li>
+            </ol>
+            <ul id="demo7-3">
+                <li is="testdata"></li>
+                <li is="testdata"></li>
+                <li is="testdata"></li>
+            </ul>
+            <div id="demo7-4">
+                <input type="text" v-model="proptext">
+                <child :my-num="proptext"></child>
+            </div>
+            <div id="demo7-5">
+                <p v-for="list in lists">{{ list }}</p>
+                <text-button v-on:msg="childmsg"></text-button>
+            </div>
         </div>
         <!--主体End-->
     </div>
