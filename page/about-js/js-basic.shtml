@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS,JQ的基础用法</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <script src="/assets/js/libs/jquery-1.8.3.min.js"></script>
+    <style>
+        .btnBox {
+            float: left;
+            width: 50%;
+        }
+        .btnBox a {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="body-container">
+        <!--#include virtual="/inc/header.shtml"-->
+        <!--主体Start-->
+        <div class="main-container">
+            <ul class="list-contant li-list">
+                <li class="clear">
+                    <h1>获取/设置输入框的值：<input type="text" class="ex-input" id="exInput"></h1>
+                    <div class="btnBox">JS：
+                        <a href="#" onclick="alert(document.getElementsByClassName('ex-input')[0].value)">通过类获取document.getElementsByClassName('ex-input')[0].value</a>
+                        <a href="#" onclick="alert(document.getElementById('exInput').value)">通过ID获取document.getElementsById('exIput').value</a>
+                        <a href="#" onclick="document.getElementById('exInput').value = '测试'">通过ID设置document.getElementsById('exIput').value = '测试'</a>
+                    </div>
+                    <div class="btnBox" style="float: right;">JQ：
+                        <a href="#" onclick="alert($('.ex-input').val())">通过类获取$('.ex-input').val()</a>
+                        <a href="#" onclick="$('.ex-input').val('测试')">通过类设置$('.ex-input').val('测试')</a>
+                    </div>
+                </li>
+                <li>
+                    <h1>获取下拉框选中值：
+                        <select id="exSelect">
+                            <option value="text1" selected>text1</option>
+                            <option value="text2">text2</option>
+                            <option value="text3">text3</option>
+                        </select>
+                    </h1>
+                    <div class="btnBox">JS：
+                        <a href="#" id="getSelectBtn" onclick="select()">options[index].value</a>
+                    </div>
+                    <div class="btnBox">JQ：
+                        <a href="#" onclick="console.log($('#exSelect option:selected').val())">dad</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--主体End-->
+    </div>
+    <script>
+        window.onload = function () {
+            var getSelectBtn = document.getElementById('getSelectBtn');
+            getSelectBtn.select = function () {
+                var element = document.getElementById('exSelect');
+                var index = element.selectedIndex;
+                var _value = element.options[index].value;
+                console.log(_value);
+           }
+        }
+    </script>
+</body>
+</html>
