@@ -9,9 +9,9 @@ function ifIntoSight(el) {
 }
 
 //遍历所有图片，判断是否在可视区域
-function initImage() {
-    var imgList = document.querySelectorAll('.myImage');
-    imgList.forEach(function (el, index, arr) {
+function initImage() {debugger
+    var imgList = document.getElementsByClassName('myImage');
+    Array.from(imgList).forEach(function (el, index, arr) {
         if (ifIntoSight(el)) {
             loadImg(el);
         }
@@ -21,6 +21,6 @@ function initImage() {
 //加载图片
 function loadImg(element) {
     if (!element.src) {
-
+        element.src = element.dataset.src;
     }
 }
