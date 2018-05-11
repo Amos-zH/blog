@@ -5,6 +5,15 @@
     <title>懒加载</title>
     <link rel="stylesheet" href="/assets/css/base.css">
     <script src="/assets/js/modules/about-js/lazyload.js"></script>
+    <style>
+        .img-box { text-align: center;width: 500px;height: 500px;margin: 0 auto 50px auto; }
+        .myImage {
+            width: auto;
+            height: auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="body-container">
@@ -19,5 +28,9 @@
         </div>
         <!-- 主体End -->
     </div>
+    <script>
+        window.load = initImage();
+        window.onscroll = loadImg('.myImage');
+    </script>
 </body>
 </html>
