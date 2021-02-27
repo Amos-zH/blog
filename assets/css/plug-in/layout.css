@@ -1,8 +1,0 @@
-@import url('../base.css');
-body .pannel{
-    width: 600px;
-    height: 400px;
-    display: block;
-    border: 1px solid #95B8E7;
-    margin: 0 auto;
-}
